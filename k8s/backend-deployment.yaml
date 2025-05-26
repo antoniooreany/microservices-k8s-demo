@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-#        image: gcr.io/$PROJECT_ID/backend:latest
+#        image: gcr.io/${PROJECT_ID}/backend:latest
         image: gcr.io/microservices-k8s-demo-460710/backend:latest
         ports:
         - containerPort: 8080

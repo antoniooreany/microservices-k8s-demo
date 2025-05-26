@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
       - name: frontend
-#        image: gcr.io/microservices-k8s-demo-460710/frontend:latest
-        image: gcr.io/$(PROJECT_ID)/backend:latest
+        image: gcr.io/microservices-k8s-demo-460710/frontend:latest
+#        image: gcr.io/${PROJECT_ID}/backend:latest
         ports:
         - containerPort: 3000
         resources:
