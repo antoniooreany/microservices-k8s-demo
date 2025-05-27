@@ -5,6 +5,8 @@ metadata:
   namespace: default
 spec:
   ingressClassName: "nginx"
+#  ingressClassName: "gce"
+#  ingressClassName: gce
   rules:
   - http:
       paths:
