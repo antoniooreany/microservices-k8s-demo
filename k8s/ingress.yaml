@@ -26,3 +26,10 @@ spec:
             name: echo-service
             port:
               number: 80
+      - path: /secret-key
+        pathType: Prefix
+        backend:
+          service:
+            name: echo-service
+            port:
+              number: 80
