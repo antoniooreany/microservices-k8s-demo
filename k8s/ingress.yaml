@@ -3,9 +3,11 @@ kind: Ingress
 metadata:
   name: demo-ingress
   namespace: default
+#  annotations:
+#    networking.gke.io/v1beta1.FrontendConfig: demo-frontend-config
 spec:
   ingressClassName: "nginx"
-#  ingressClassName: "gce"
+#  ingressClassName: "gce" # No need to specify this if using GKE with default Ingress class
 #  ingressClassName: gce
   rules:
   - http:
@@ -24,4 +26,3 @@ spec:
             name: echo-service
             port:
               number: 80
-

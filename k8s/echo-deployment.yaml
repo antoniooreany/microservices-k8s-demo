@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: echo
-        image: gcr.io/microservices-k8s-demo-460710/echo:latest
+        image: gcr.io/microservices-k8s-demo-460710/echo:latest # TODO: Make it not hardcoded
 #        image: gcr.io/$PROJECT_ID/echo:latest
         ports:
         - containerPort: 5001
