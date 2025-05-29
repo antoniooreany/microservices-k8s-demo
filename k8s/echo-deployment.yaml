@@ -19,3 +19,9 @@ spec:
 #        image: gcr.io/$PROJECT_ID/echo:latest
         ports:
         - containerPort: 5001
+        env:
+          - name: SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: echo-secret
+                key: SECRET_KEY
