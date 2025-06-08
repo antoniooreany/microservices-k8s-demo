@@ -1,9 +1,9 @@
-apiVersion: networking.gke.io/v1beta1
-kind: FrontendConfig
-metadata:
-  name: demo-frontend-config
-  namespace: default
-spec:
-  healthCheck:
-    port: 3000
-    requestPath: /healthz
+#apiVersion: networking.gke.io/v1beta1
+#kind: FrontendConfig
+#metadata:
+#  name: demo-frontend-config
+#  namespace: default
+#spec:
+#  healthCheck:
+#    port: 3000
+#    requestPath: /healthz
