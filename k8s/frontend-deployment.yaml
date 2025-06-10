@@ -17,6 +17,14 @@ spec:
       - name: frontend
         image: gcr.io/microservices-k8s-demo-460710/frontend:latest
 #        image: gcr.io/${PROJECT_ID}/backend:latest
+
+        env:
+          - name: FRONTEND_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap
+                key: FRONTEND_PORT
+
         ports:
         - containerPort: 3000
         resources:

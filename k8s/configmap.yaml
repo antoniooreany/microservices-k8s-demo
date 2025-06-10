@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+  FRONTEND_PORT: "3000"
+  BACKEND_PORT: "8080"

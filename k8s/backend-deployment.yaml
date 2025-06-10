@@ -17,6 +17,14 @@ spec:
       - name: backend
 #        image: gcr.io/${PROJECT_ID}/backend:latest
         image: gcr.io/microservices-k8s-demo-460710/backend:latest
+
+        env:
+          - name: BACKEND_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: configmap
+                key: BACKEND_PORT
+
         ports:
         - containerPort: 8080
         resources:

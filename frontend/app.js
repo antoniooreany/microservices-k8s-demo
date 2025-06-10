@@ -11,6 +11,10 @@ app.get('/', async (req, res) => {
     }
 });
 
+const port = process.env.FRONTEND_PORT;
+
 app.listen(3000, () => {
     console.log('Frontend running on port 3000');
+//app.listen(port, () => {
+//    console.log('Frontend running on port ${port}');
 });
