@@ -26,7 +26,11 @@ spec:
                 key: BACKEND_PORT
 
         ports:
-        - containerPort: 8080
+        - containerPort: BACKEND_PORT
+          # Note: BACKEND_PORT is defined in the ConfigMap, so it should be set to the value from the ConfigMap.
+          # If you want to use a specific port, you can replace BACKEND_PORT with the actual port number.
+          # For example, if BACKEND_PORT is 8080, you can set containerPort: 8080.
+
         resources:
           requests:
             cpu: "100m"

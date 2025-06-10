@@ -26,7 +26,11 @@ spec:
                 key: FRONTEND_PORT
 
         ports:
-        - containerPort: 3000
+        - containerPort: FRONTEND_PORT
+          # Note: FRONTEND_PORT is defined in the ConfigMap, so it should be set to the value from the ConfigMap.
+          # If you want to use a specific port, you can replace FRONTEND_PORT with the actual port number.
+          # For example, if FRONTEND_PORT is 3000, you can set containerPort: 3000.
+
         resources:
           requests:
             cpu: "100m"
